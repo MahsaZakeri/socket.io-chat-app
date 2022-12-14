@@ -1,0 +1,227 @@
+#massenger {
+  width: 70%;
+  margin: auto;
+  height: 70vh;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.massenger_header {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 12%;
+  padding: 0 25px;
+  background-color: #2663bf;
+}
+
+.massenger_body {
+  flex-basis: 80%;
+  background-color: #ffffff;
+  height: 88%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  overflow-y: auto;
+}
+
+.massenger_sidebar {
+  flex-basis: 20%;
+  background-color: #c8d8e9;
+  height: 85%;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+.massenger_sidebar h5 {
+  color: #2156a5;
+  text-align: center;
+  font-weight: 700;
+}
+.users {
+  list-style: none;
+  color: #2156a5;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 70%;
+}
+.users li {
+  text-align: center;
+  user-select: none;
+}
+.leave_group_btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px dotted #ffffff;
+  font-family: inherit;
+  outline: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  word-spacing: 10%;
+}
+.leave_group_btn:hover {
+  background-color: #ffffff;
+  color: #2663bf;
+  border-color: #2663bf;
+}
+.chat_group_name {
+  color: #2156a5;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 2px solid #2156a5;
+}
+.message_wrapper {
+  color: #000;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #d1e1f9;
+  width: auto;
+  max-width: 80%;
+  padding: 4px 10px;
+  margin: 6px 12px;
+  border-radius: 6px;
+}
+.message_wrapper:last-of-type {
+  margin-bottom: 60px;
+}
+.author_info {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message_time {
+  font-size: 12px;
+  margin-left: 20px;
+  color: #5c5b5b;
+}
+
+.message_content {
+  font-size: 12px;
+  margin: 2px 25px 4px 5px;
+  line-height: 1.4;
+}
+
+.message_form_wrapper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.message_input_wrapper {
+  flex-basis: 85%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.message_input {
+  padding: 15px 30px;
+  width: 100%;
+  background-color: #9db5cc;
+  font-family: inherit;
+  border: none;
+}
+.message_input:focus {
+  outline: none;
+}
+
+.message_input::placeholder {
+  font-size: 12px;
+}
+.send_message_btn_wrapper {
+  flex-basis: 15%;
+}
+.send_message_btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #2156a5;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.massenger_sidebar h5 {
+  margin: 5px 0;
+  color: #000;
+}
+@media (max-width: 600px) {
+  #massenger {
+    width: 80%;
+  }
+  .massenger_header {
+    height: 10%;
+    padding: 0 10px;
+  }
+  .leave_group_btn {
+    font-weight: 500;
+    padding: 2px 12px;
+    font-size: 14px;
+  }
+  .massenger_sidebar {
+    font-size: 12px;
+    flex-basis: 25%;
+    height: 90%;
+  }
+  .massenger_body {
+    flex-basis: 75%;
+    height: 90%;
+  }
+  .send_message_btn {
+    padding: 10px 4px;
+    font-size: 10px;
+  }
+  .message_input {
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+  .message_content {
+    margin: 2px 0;
+    font-size: 10px;
+  }
+  .message_wrapper {
+    margin: 4px 8px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  .chat_group_name {
+    padding: 6px 0;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .chat_group_name strong.mx-1 {
+    margin: 0;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .users li {
+    font-size: 10px;
+  }
+}
